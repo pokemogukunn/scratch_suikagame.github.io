@@ -13,19 +13,18 @@ content="Play Four Colors or UNO Unblocked. Enjoy this Puzzle Card Game with you
 <link rel="stylesheet" type="text/css" href="css/user.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/custom.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+<link rel="stylesheet" type="text/css" href="css/post.css" />
 
 <!-- Font Awesome icons (free version)-->
-<link rel="stylesheet" type="text/css"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/0.css" />
 <!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/kakaomame.css" />
 
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z59G0DQ2T"></script>
+<script type="text/javascript" src="js/pokemogukunn.js"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
@@ -39,7 +38,7 @@ gtag('config', 'G-7Z59G0DQ2T');
 </head>
 
 
-<body id="page-top" style="background: url('images/background1.png'); background-size: cover;">
+<body id="page-top" style="background: url('images/background1.png'); background-size: cover;"><script type="text/javascript" src="https://ad.netowl.jp/js/star-php.js"></script>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
 <div class="container">
