@@ -1,0 +1,1411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Uno Online</title>
+<style>
+  body {
+            color: #ededed;
+            background-color: #000;
+            border: none;
+            margin: 0;
+            font-family: Roboto, sans-serif;
+        }
+ 
+        h1 {
+            font-size: 1.8em;
+            font-family: Roboto, sans-serif;
+            line-height: 1.167em
+        }
+ 
+        h1,
+        h1 a,
+        h1 a:visited {
+            color: #f4f4f4;
+        }
+ 
+        h2 {
+            color: #f4f4f4;
+            line-height: 1em;
+        }
+ 
+    
+	header {
+		height: 60px;
+	}
+ 
+ 
+        p {
+            line-height: 1.8em;
+        }
+ 
+        .boxInner2,
+        .boxInner3 {
+            height: 208px;
+            width: 180px;
+            background: #2a2a2a;
+            color: #fff;
+        }
+ 
+        .boxInner2 a,
+        .boxInner3 a {
+            color: #626262
+        }
+ 
+        .boxInner,
+        .boxInner2,
+        .boxInner3 {
+            margin: 4px 20px 12px;
+			border-radius: 10px;
+            position: relative;
+        }
+ 
+        .boxInner3 img {
+            border-radius: 5px;
+        }
+ 
+        .titleBox {
+            bottom: 0;
+            width: 170px;
+            background-color: #1e1e1e;
+            border-radius: 0 0 10px 10px;
+            font: 15px 'Lucida Sans', sans-serif;
+            padding: 5px;
+            overflow: hidden;
+            position: absolute;
+            color: #eee;
+        }
+ 
+        a {
+            text-decoration: none;
+            color: #ededed;
+        }
+ 
+        .morelinks a {
+            font-weight: 600;
+            font-size: 15px !important;
+        }
+ 
+        #items li,
+        .navlink,
+        .navlink a,
+        ul.tabs li {
+            display: inline-block
+        }
+ 
+        .logo {
+            padding: 15px;
+        }
+ 
+        .logo a {
+            font-size: 20px;
+            color: #ffc600;
+            font-weight: 700;
+        }
+ 
+        ::placeholder {
+            color: #cbcbcb;
+        }
+ 
+        #content {
+            text-align: center;
+            background: #000;
+        }
+ 
+        ol,
+        ul {
+            padding: 0;
+        }
+		
+		.favorite{
+		    font-size: 30px;
+			padding-right: 10px;
+		
+		}
+     .boxInner2 img {
+                border-radius: 10px 10px 0 0;
+        }
+	 #description ul,
+        #description ol {
+			line-height: 1.8em;
+            padding: 5px 30px;
+        }
+ 
+div#howto ul {
+    padding-left: 30px;
+}
+ 
+        .tag-carousel {
+            width: 90%;
+            margin: auto auto;
+            padding: 15px;
+            position: relative;
+        }
+ 
+        .tag-carousel2 {
+            width: 85%;
+        }
+ 
+        .score {
+            display: none;
+        }
+ 
+        .slider,
+        .slider2 {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+ 
+        span.sf.alignleft {
+            font-weight: 700;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+ 
+        .alignleft {
+            float: left;
+        }
+ 
+        ul.tags {
+            list-style: none;
+        }
+ 
+        a.moreless.more {
+            display: flex;
+            margin: 10px 0;
+        }
+ 
+        #playgame {
+            justify-content: center;
+            display: grid;
+            margin: 20px 0;
+        }
+ 
+        #how-to p,
+        #description p {
+            max-width: 75%;
+            color: #e4e4e4;
+            line-height: 1.8em;
+        }
+ 
+        .as,
+        .as2 {
+            max-height: 93px;
+            text-align: center;
+        }
+ 
+        ul#breadcrumb {
+            display: inline-flex;
+            list-style: none;
+            padding-left: 10px;
+            font-size: 15px;
+            display: flex;
+            flex-flow: wrap;
+        }
+ 
+        ul#breadcrumb li+li:before {
+            padding: 5px;
+            color: #13aeff;
+            content: "/\00a0";
+        }
+ 
+        .playbutton {
+            align-items: center;
+            padding: 0 240px;
+            height: 48vh;
+			position: sticky;
+            display: flex;
+            flex-wrap: wrap;
+            background: #181818;
+            border: 1px solid #383b3e;
+            border-radius: 5px;
+        }
+		.playbutton:before {
+			content: " ";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+						background-image: url(https://kbhgames.com/wp-content/uploads/2015/05/Uno1.jpg);
+						background-repeat: no-repeat;
+			background-size: cover;
+			filter: blur(30px) brightness(0.6);
+			z-index: -1;
+			
+			
+		}
+        .ptb img {
+            border-radius: 100px;
+            margin-top: 20px;
+			border: 3px solid #000000;
+        }
+		.btnplaynow {
+			background-color: #000000;
+			border: 1px solid #333333;
+			border-radius: 10px;
+			margin-left: 10px;
+			padding: 10px;
+		
+		}
+		.btnplaynow:hover {
+			box-shadow: inset 400px 0 0 0 #3e8e41;
+		}
+        #info {
+            padding: 0 7%;
+            min-height: 400px;
+        }
+ 
+        ul.tabs {
+            padding: 15px;
+            text-align: center;
+			border-radius: 5px 5px 0 0;
+            margin: auto;
+            background: #16181a;
+        }
+ 
+        .tags li {
+            margin: 5px;
+        }
+ 
+        .tags {
+            display: flex;
+            padding: 25px 0;
+            flex-wrap: wrap;
+        }
+ 
+        .tags a,
+        .tags a:visited {
+            border: 1px solid #24617b;
+            font-size: .917em !important;
+            font-weight: 600;
+            padding: 8px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 10px;
+        }
+ 
+        .playnowtext {
+            font-size: 50px;
+            color: white;
+            display: contents;
+            cursor: pointer;
+            padding: 30px 10px;
+            font-weight: 700;
+        }
+ 
+        #info-box {
+            padding: 5px 0 30px;
+			max-width: 1000px;
+			margin: 15px auto;
+        }
+ 
+        #info-box a {
+            color: #abd4fd;
+        }
+ 
+        #info-box ul {
+            line-height: 1.8em;
+        }
+ 
+        .midbox {
+         font-size: 18px;
+		background-color: #242424;
+		text-align: left;
+		max-width: 100%;
+		min-height: 425px;
+		margin: 0% 6%;
+		border-radius: 10px;
+        }
+ 
+        .midbox h1 {
+            color: #e4e4e4;
+            padding-bottom: 13px;
+        }
+ 
+        .tab-content {
+            padding: 10px
+        }
+ 
+        ul.tabs li {
+            color: #fafafa;
+            padding: 3px;
+            cursor: pointer;
+            width: 230px;
+            font-weight: 600;
+        }
+ 
+        ul.tabs li.current {
+            color: #EEE;
+            border-radius: 3px;
+			border: 1px solid #414141;
+			background: #242424;
+			padding: 7px;
+        }
+ 
+        .tab-content.current {
+            display: inherit;
+        }
+ 
+ 
+		.tab-content {
+			display: none;
+		}
+ 
+        @media (hover:none) {
+            .nomobile {
+                display: none;
+            }
+        }
+ 
+        @media screen and (max-width: 979px) {
+            #info {
+                padding: 0 10px;
+            }
+            #extra-desc {
+                padding: 7px;
+            }
+            .playbutton {
+                margin: 10px;
+                padding: 25px;
+                justify-content: center;
+            }
+      
+            ul.tabs {
+                display: none;
+            }
+            ul.tabs li {
+                width: 20%;
+            }
+        }
+ 
+        #how-to button {
+            font-weight: 600;
+        }
+		p#extra-desc {
+			padding: 0 7%;
+			text-align: left;
+		}
+			
+ 
+ 
+ 
+   .align-right {
+            float: right;
+        }
+ 
+        #mySidebar {
+            height: 100%;
+            width: 180px;
+            background: #000;
+            position: fixed !important;
+            overflow: hidden;
+            z-index: 999999;
+        }
+ 
+        #mySidebar:hover {
+            overflow: auto;
+        }
+ 
+        a.sidebar-bar-item {
+            display: block;
+            padding: 5px;
+            color: #ddd !important;
+            text-decoration: none;
+        }
+ 
+        a.sidebar-bar-item:hover {
+            background: #19273b;
+            text-decoration: none;
+        }
+ 
+        #mySidebar::-webkit-scrollbar {
+            width: 7px;
+        }
+ 
+        #mySidebar::-webkit-scrollbar-thumb {
+            background: rgba(168, 168, 168, 0.8);
+        }
+ 
+        #searchform input[type="text"] {
+          border-radius: 2px;
+    width: 50%;
+    font-size: 18px;
+    height: 10px;
+    color: #ededed;
+    background-color: #000;
+    border: 1px solid #4b4b4b;
+    padding: 10px;
+        }
+ 
+        .navlink button {
+            margin: 0 10px;
+            color: #ededed;
+            background-color: #575757;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: x-large;
+            width: 55px;
+            display: none
+        }
+ 
+        .navlink button:focus {
+            outline: 0;
+        }
+ 
+ 
+        button.btn.btn-primary {
+              border-radius: 0px;
+				font-size: 16px;
+				height: 33px;
+				border: 0px solid #000;
+				background-color: #181818;
+				padding: 0 15px 0 15px;
+ 
+        }
+ 
+.searchbutton{
+	color: #fff;
+    border: 1px solid #645b5b;
+    background-color: #181818;
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 20px;
+}
+ 
+        #info-box h3 {
+            padding: 20px 0 0;
+            margin: 0 0 20px;
+        }
+ 
+        .searchbar {
+       
+            width: 70%;
+        }
+ 
+        @media only screen and (max-width: 480px) {
+            #back-to-top,
+            .login {
+                display: none;
+            }
+            #how-to p,
+            #description p {
+                max-width: 100%;
+            }
+            #searchform input[type="text"] {
+                width: 155px;
+            }
+            .searchbar {
+                width: 0%;
+                padding: 0px
+            }
+            #info-box .align-right {
+                float: none;
+            }
+            #how-to,
+            #description {
+                max-width: 100%;
+            }
+            body {
+                overflow: hidden;
+            }
+            #extra-desc {
+                padding: 15px !important;
+            }
+            #topnav {
+                height: 60px;
+                padding: 10px;
+            }
+            #mySidebar {
+                overflow-y: auto;
+            }
+            .tagwrap {
+                padding: 1px
+            }
+            .s2,
+            .s,
+            .as,
+			.as2,
+            .rr {
+                display: none;
+            }
+			
+	
+ 
+        }
+ 
+        .rr {
+            margin: auto;
+            float: right;
+            padding: 10px;
+        }
+ 
+        @media (max-width:850px) and (min-width:481px) {
+            #searchform input[type="text"] {
+                width: 77%;
+            }
+            .searchbar {
+                width: 70%;
+                padding: 15px 0 0 7%;
+            }
+            #extra-desc {
+                padding: 20px;
+            }
+            #mySidebar {
+                overflow-y: auto;
+            }
+        }
+ 
+     @media screen and (max-width: 950px) {
+            #mySidebar {
+                display: none;
+            }
+            #topnav {
+                margin-left: 0
+            }
+            #content {
+                margin-left: 0
+            }
+            .navlink button {
+                display: block;
+            }
+			
+ 
+        }
+ 
+ 
+		
+		   @media screen and (min-width: 1125px){
+		.icon-search{ display:none;}
+		}
+		
+ 
+		
+    @media screen and (max-width: 1125px){
+		.searchbar{ display:none;}
+		.sub-menu ul li {
+			margin:0px;
+		}
+				
+				
+		.favorite{
+		 position: absolute;
+		padding-top:5px;
+		  right: 125px;
+		}
+		
+			
+		
+		button.openBtn{
+    width: 50px;
+    margin: -1px;
+    position: absolute;
+    margin: 10px;
+    right: 50px;
+    border: 0px;
+    background: #181818;
+	
+	}
+		}
+		
+		
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+}
+ 
+ 
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+ 
+ 
+.overlay .closebtn {
+  position: absolute;
+  top: 50px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+ 
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+ 
+ 
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 75%;
+  background: white;
+}
+ 
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+ 
+ 
+.overlay button {
+  float: left;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+ 
+.overlay button:hover {
+  background: #bbb;
+}
+		
+		
+ 
+.icon-search{
+color: #fff;
+    font-size: 24px;
+	}
+		
+		
+		
+ 
+		
+		
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/wp-content/themes/v1/css/fonts/comoon.eot?38kjjm');
+  src:  url('/wp-content/themes/v1/css/fonts/icomoon.eot?38kjjm#iefix') format('embedded-opentype'),
+    url('/wp-content/themes/v1/css/fonts/icomoon.ttf?38kjjm') format('truetype'),
+    url('/wp-content/themes/v1/css/fonts/icomoon.woff?38kjjm') format('woff'),
+    url('/wp-content/themes/v1/css/fonts/icomoon.svg?38kjjm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+ 
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+ 
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-bars:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e986";
+}
+ 
+.icon-heart:before {
+  content: "\e9da";
+}
+.navbar{
+    background: #181818;
+ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 9995;
+}
+.brand-and-icon{
+    display: flex;
+    justify-content: space-between;
+  padding-bottom: 10px;
+    border-bottom: 1px solid #4c4c4c
+}
+.navbar-brand{
+    color: #fbb12b;
+    font-size: 1.3rem;
+    width: 150px;
+    padding: 10px 0 0 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.navbar-toggler{
+   
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #FFF;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.4s ease;
+    border: 2px solid #ababab;
+    border-radius: 4px;
+}
+.navbar-toggler:hover{
+    opacity: 0.7;
+}
+.navbar-collapse{
+    overflow-y: scroll;
+    display: none;
+}
+.navbar-nav > li > a{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+    padding: 0.6rem 0 0 0.6rem;
+    margin: 0.2rem 0;
+    border-bottom: 1px solid #2c2c2c;
+    border-radius: 1px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.drop-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navbar-nav > li > a:hover{
+    opacity: 0.7;
+}
+.sub-menu h4{
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+.sub-menu ul li{
+    text-transform: capitalize;
+  
+	list-style: none;
+    width: 200px;
+    font-size: 0.95rem;
+}
+.sub-menu ul li a:hover{
+    opacity: 0.9;
+}
+.sub-menu{
+    display: none;
+}
+ 
+@media screen and (min-width: 992px){
+ 
+    .navbar{
+	
+        flex-direction: row;
+		align-items: center;
+		position: fixed;
+		border: 1px solid;
+		border-color: #525252;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .brand-and-icon{
+ 
+        border-bottom: none;
+        padding: 0;
+    }
+    .navbar-collapse{
+        display: block!important;
+        overflow-y: hidden;
+        flex: 1 0 auto;
+    }
+    .navbar-nav{
+        display: flex;
+		margin:0px;
+ 
+    }
+    .navbar-nav > li > a{
+          border-bottom: none;
+		margin: 0 0.4rem;
+		padding: 1.7rem 0.5rem 1rem 0.5rem;
+		font-size: 0.8rem;
+    }
+ 
+	
+    .sub-menu{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        background: #323232;
+    }
+    .navbar-nav > li:hover .sub-menu{
+        display: grid!important;
+        grid-template-columns: repeat(4, 1fr);
+		padding: 10px 0 10px 0px;
+    
+    }
+	
+ 
+    .navbar-nav > li{
+		    list-style-type: none;
+    }
+    .navbar-nav > li:hover{
+        border-bottom-color: #000;
+    }
+    .sub-menu-item{
+           padding-left: 15%;
+    }
+ 
+	.openBtn{
+	background: #181818;
+    border: 0;
+	}
+	}
+	
+	
+ 
+ 
+ 
+ 
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAMFBMVEU2Njb/xgCuih97ZSvZqg9LQzNcUDFsWy6JbyiWeSW5kxvEmxfjsQr2wAPPohPtuQYI+9kBAAAAVUlEQVR42mNgwA3SWQsgDBWem4JyjApODCqKzcILE4EMfTlmYUXGzYcYFEWYBUUCBYUYFBcaCzc2AkVUYjcLN04EKeaSFJQNBDLSWc2NTZkTyhiIAADOyRDIUV4GggAAAABJRU5ErkJggg==">
+<meta name='robots' content='max-image-preview:large' />
+<meta property="og:title" content="Uno Online Online"><meta property="og:image" content="https://kbhgames.com/wp-content/uploads/2015/05/Uno1.jpg"><link rel="canonical" href="https://kbhgames.com/game/uno-online"><meta name="description" content="This free UNO online card game is a colorful, 3-player version of the classic UNO card game.">			
+	
+	 
+	 	 
+	 
+	 	 <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SRHSFW2NJT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-SRHSFW2NJT');
+</script>
+ 
+	 
+ 
+</head>
+<body>
+<script type="text/javascript" src="https://ad.xdomain.ne.jp/js/server-php.js"></script>
+<header>  
+	     <nav class = "navbar">
+        <div class = "brand-and-icon">
+          <a href = "https://kbhgames.com" class = "navbar-brand">KBH Games</a>
+          <button type = "button" class = "navbar-toggler">
+           <span class="icon-bars"></span>
+          </button>
+        </div>
+ 
+        <div class = "navbar-collapse">
+          <ul class = "navbar-nav">
+            <li>
+              <a href = "https://kbhgames.com/new">New</a>
+            </li>
+ 
+    <li>
+              <a href = "https://kbhgames.com/tag/friday-night-funkin">FNF</a>
+            </li>
+ 
+    <li>
+              <a href = "https://kbhgames.com/tag/action">Action</a>
+            </li>
+    <li>
+              <a href = "https://kbhgames.com/tag/puzzle">Puzzle</a>
+            </li>
+    <li>
+              <a href = "https://kbhgames.com/tag/2-player">2 Players</a>
+            </li>
+  <li>
+              <a href = "https://kbhgames.com/tag/sports">Sports</a>
+            </li>
+            
+ 
+            <li>
+              <a href = "#" class = "menu-link">
+                More +
+                <span class = "drop-icon">
+                  <i class = "fas fa-chevron-down"></i>
+                </span>
+              </a>
+              <div class = "sub-menu">
+              
+                <div class = "sub-menu-item">
+             
+                  <ul>
+                    <li> <a href="https://kbhgames.com/best-new-games" class="sidebar-bar-item">Best Of New</a></li>
+                    <li><a href="https://kbhgames.com/tag/shooting" class="sidebar-bar-item">Shooting</a></li>
+					              <li><a href="https://kbhgames.com/tag/arcade" class="sidebar-bar-item">Arcade</a></li>
+              <li><a href="https://kbhgames.com/tag/strategy" class="sidebar-bar-item">Strategy</a></li>
+                    <li><a href="https://kbhgames.com/tag/fighting" class="sidebar-bar-item">Fighting</a></li>
+					  <li> <a href="https://kbhgames.com/tag/simulation" class="sidebar-bar-item">Simulation</a></li>
+					     <li><a href="https://kbhgames.com/tag/platformer" class="sidebar-bar-item">Platformer</a></li>
+					 					 <li><a href="https://kbhgames.com/tag/educational" class="sidebar-bar-item">Educational</a></li>
+										 			
+															 				
+																				 
+                  </ul>
+                </div>
+           
+                <div class = "sub-menu-item">
+                
+                  <ul>
+                    <li><a href="https://kbhgames.com/tag/racing" class="sidebar-bar-item">Racing</a></li>
+                    <li><a href="https://kbhgames.com/tag/funny" class="sidebar-bar-item">Funny</a></li>
+                    <li><a href="https://kbhgames.com/tag/retro" class="sidebar-bar-item">Retro</a></li>
+                    <li><a href="https://kbhgames.com/tag/multiplayer" class="sidebar-bar-item">Multiplayer</a></li>
+                    <li><a href="https://kbhgames.com/tag/running" class="sidebar-bar-item">Run</a></li>
+					              <li><a href="https://kbhgames.com/tag/board" class="sidebar-bar-item">Board</a></li>
+								   <li><a href="https://kbhgames.com/tag/card" class="sidebar-bar-item">Card</a></li>
+								              <li><a href="https://kbhgames.com/tag/cartoon" class="sidebar-bar-item">Cartoon</a></li>
+											              
+														   
+                  </ul>
+                </div>
+             
+                    <div class = "sub-menu-item">
+                
+                  <ul>
+                     <li><a href="https://kbhgames.com/tag/3d" class="sidebar-bar-item">3D</a></li>
+                    <li><a href="https://kbhgames.com/tag/skill" class="sidebar-bar-item">Skill</a></li>
+        
+                    <li><a href="https://kbhgames.com/tag/casual" class="sidebar-bar-item">Casual</a></li>
+            
+					  <li><a href="https://kbhgames.com/tag/car" class="sidebar-bar-item">Car</a></li>
+					  
+					    <li><a href="https://kbhgames.com/tag/download" class="sidebar-bar-item">Download</a></li>
+                  </ul>
+                </div>
+             
+             
+              </div>
+            </li>
+ 
+        
+          </ul>
+        </div>
+	    <button class="openBtn" onclick="openSearch()"> <span class="icon-search"></span> </button>
+			      <div class="searchbar">
+                    <form role="search" class="form-search" method="get" id="searchform" action="https://kbhgames.com/"><input type="text" name="s" placeholder="Search for a Game"><button type="submit" class="btn btn-primary">&#128270;</button></form>
+                </div>
+				
+				<div class="favorite"><a href="https://kbhgames.com/favorite"><span class="icon-heart"></span></a></div>
+      </nav>
+	  
+</header>
+ 
+ 
+ 
+ 
+<div id="content">
+ 
+<ul id="breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+  <li property="itemListElement" typeof="ListItem">
+    <a property="item" typeof="WebPage" href="https://kbhgames.com">
+      <span property="name">KBH Games</span></a>
+    <meta property="position" content="1">
+  </li> 
+ 
+ 
+  
+  
+  
+    
+ 
+  
+  
+  	<li property='itemListElement' typeof='ListItem'>
+    <a property='item' typeof='WebPage' href='https://kbhgames.com/tag/board'>
+      <span property='name'>
+	  Board Games	  </span></a>
+    <meta property='position' content='2'>
+  </li>
+  
+      
+  
+  <li property='itemListElement' typeof='ListItem'>
+	  <span property='name'>Uno Online</span>
+	   <meta property='position' content='3'>
+    </li>
+  
+</ul>
+<div id="playscreen">
+		
+ 
+<div class="dda">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6866920588347480"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;min-width:380px;max-width:970px;width:100%;height:90px"
+     data-ad-client="ca-pub-6866920588347480"
+     data-ad-slot="8221213457"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+ 
+ 
+		<div id="playgame">
+ 
+			<div class="score">
+						<div class="score-button"><div class='watch-action'><div class='watch-position align-left'><a class='lbg-style1 like-35706 jlk' href='https://kbhgames.com/wp-admin/admin-ajax.php?action=wti_like_post_process_vote&amp;task=like&amp;post_id=35706&amp;nonce=a5dc40808c' data-task='like' data-post_id='35706' data-nonce='a5dc40808c' rel='nofollow'><div class='action-like'><div class='icon icon-thumbs-up'></div></div></a><a class='unlbg-style1 unlike-35706 jlk' href='https://kbhgames.com/wp-admin/admin-ajax.php?action=wti_like_post_process_vote&amp;task=unlike&amp;post_id=35706&amp;nonce=a5dc40808c' data-task='unlike' data-post_id='35706' data-nonce='a5dc40808c' rel='nofollow'><div class='action-unlike'><div class='icon icon-thumbs-down'></div></div> </a></div> <div class='status-35706 status align-left'></div></div><div class='wti-clear'></div>
+		<div class='rating-bar-container'>
+			<div class='green-percent' data-percent='75'></div>
+		</div></div>
+			</div>
+			
+		<div id="game">
+	
+				<div class="playbutton">
+<div class="playnowtext" data-id="35706"  >
+		<div class="ptb"><img class="lazy" src="/m.svg"  data-src="https://kbhgames.com/wp-content/uploads/2015/05/Uno1.jpg"  width="180" height="180" alt="Uno Online"></div>
+		<span class="btnplaynow">&#9658; Play Now!</span></div>
+</div>
+ 
+</div>
+ 
+		</div>
+ 
+		
+<div class="as2">
+<ins class="adsbygoogle"
+     style="display:inline-block;min-width:380px;max-width:970px;width:100%;height:90px"
+     data-ad-client="ca-pub-6866920588347480"
+     data-ad-slot="8027897054"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+	
+<div class="tag-carousel tag-carousel2">
+   <span class="sf alignleft">You might also Like</span>
+   <div id="related" class="slider">
+   
+ 
+	      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/duo-uno-with-friend-online">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2021/11/Uno-With-Friend-Online.jpg" alt="DUO/UNO With Friend Online" title="DUO/UNO With Friend Online" width="180" height="180">
+            <div class="titleBox">DUO/UNO With Friend Online</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/uno-online-card-game">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2017/03/fourcolors.jpg" alt="UNO Online Multiplayer" title="UNO Online Multiplayer" width="180" height="180">
+            <div class="titleBox">UNO Online Multiplayer</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/uno-heroes">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2018/09/uno-hero.jpg" alt="UNO Heroes" title="UNO Heroes" width="180" height="180">
+            <div class="titleBox">UNO Heroes</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/ocho-card-game">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2022/12/Ocho-Card-Game.jpg" alt="Ocho Card Game" title="Ocho Card Game" width="180" height="180">
+            <div class="titleBox">Ocho Card Game</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/gin-rummy-classic">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2017/04/Gin-Rummy-Classic.jpg" alt="Gin Rummy Classic" title="Gin Rummy Classic" width="180" height="180">
+            <div class="titleBox">Gin Rummy Classic</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/brain-trainers">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2024/01/Brain-Trainers.jpg" alt="Brain Trainers" title="Brain Trainers" width="180" height="180">
+            <div class="titleBox">Brain Trainers</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/hearts-card-game-online">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2015/05/Hearts-Card-Game-Online.jpg" alt="Hearts Card Online" title="Hearts Card Online" width="180" height="180">
+            <div class="titleBox">Hearts Card Online</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/dragon-ball-z-collectible-card">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2014/12/Dragon-Ball-Z-Collectible-Card.jpg" alt="Dragon Ball Z Collectible Card" title="Dragon Ball Z Collectible Card" width="180" height="180">
+            <div class="titleBox">Dragon Ball Z Collectible Card</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/pyramid-solitaire-ancient-egypt">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2016/02/Pyramid-Solitaire-Ancient-Egypt.jpg" alt="Pyramid Solitaire Ancient Egypt" title="Pyramid Solitaire Ancient Egypt" width="180" height="180">
+            <div class="titleBox">Pyramid Solitaire Ancient Egypt</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/family-clash-family-feud">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2022/05/family-clash-family-feud.jpg" alt="Family Clash - Family Feud" title="Family Clash - Family Feud" width="180" height="180">
+            <div class="titleBox">Family Clash - Family Feud</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/ayumu-memory-game">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2019/11/Ayumu-Memory-Game-1.jpg" alt="Ayumu Memory Game" title="Ayumu Memory Game" width="180" height="180">
+            <div class="titleBox">Ayumu Memory Game</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/memory-match">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2023/03/Memory-Match.jpg" alt="Memory Match" title="Memory Match" width="180" height="180">
+            <div class="titleBox">Memory Match</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/solitaire-crime-stories">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2024/03/Solitaire-Crime-Stories.jpg" alt="Solitaire Crime Stories" title="Solitaire Crime Stories" width="180" height="180">
+            <div class="titleBox">Solitaire Crime Stories</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/magic-towers-solitaire">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2018/01/Magic-Towers-Solitaire.jpg" alt="Magic Towers Solitaire" title="Magic Towers Solitaire" width="180" height="180">
+            <div class="titleBox">Magic Towers Solitaire</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/dungeon-deck">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2024/09/Dungeon-Deck.jpg" alt="Dungeon Deck" title="Dungeon Deck" width="180" height="180">
+            <div class="titleBox">Dungeon Deck</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/incremental-memory">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2019/08/Incremental-Memory.jpg" alt="Incremental Memory" title="Incremental Memory" width="180" height="180">
+            <div class="titleBox">Incremental Memory</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/phase-10-online">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2020/02/Phase-10-Online.jpg" alt="Phase 10 Online" title="Phase 10 Online" width="180" height="180">
+            <div class="titleBox">Phase 10 Online</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/solitaire-time">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2016/10/Solitaire-Time.jpg" alt="Solitaire Time" title="Solitaire Time" width="180" height="180">
+            <div class="titleBox">Solitaire Time</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/fnf-x-pibby-vs-corrupted-family-guy">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2022/05/FNF-X-Pibby-vs-Corrupted-Family-Guy.jpg" alt="FNF X Pibby vs Corrupted Family Guy" title="FNF X Pibby vs Corrupted Family Guy" width="180" height="180">
+            <div class="titleBox">FNF X Pibby vs Corrupted Family Guy</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/ludo-game-online">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2023/11/Ludo-Game-Online.jpg" alt="Ludo Game Online" title="Ludo Game Online" width="180" height="180">
+            <div class="titleBox">Ludo Game Online</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/memory-challenge">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2019/04/Memory-Challenge.jpg" alt="Memory Challenge" title="Memory Challenge" width="180" height="180">
+            <div class="titleBox">Memory Challenge</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/fnf-darkness-takeover-vs-pibby-family-guy">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2022/08/fnf-darkness-takeover-vs-pibby-family-guy.jpg" alt="FNF: Darkness Takeover vs Pibby Family Guy" title="FNF: Darkness Takeover vs Pibby Family Guy" width="180" height="180">
+            <div class="titleBox">FNF: Darkness Takeover vs Pibby Family Guy</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/slide-it-colorwordsudoku-and-memory-puzzle">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2020/12/slide-it-colorwordsudoku-and-memory-puzzle.jpg" alt="Slide It - Color,Word,Sudoku and Memory Puzzle" title="Slide It - Color,Word,Sudoku and Memory Puzzle" width="180" height="180">
+            <div class="titleBox">Slide It - Color,Word,Sudoku and Memory Puzzle</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/ultimate-card-games">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2018/05/Ultimate-Card-Games.jpg" alt="Ultimate Card Games" title="Ultimate Card Games" width="180" height="180">
+            <div class="titleBox">Ultimate Card Games</div>
+         </a>
+      </div>
+ 
+		      <div class="boxInner2">
+         <a href="https://kbhgames.com/game/speed-card-game">
+            <img class="lazy" src="/m.svg" data-src="https://kbhgames.com/wp-content/uploads/2018/01/Speed-Card-Game.jpg" alt="Speed Card Game" title="Speed Card Game" width="180" height="180">
+            <div class="titleBox">Speed Card Game</div>
+         </a>
+      </div>
+ 
+		
+      <div class="left-button onecol" style="display: block;"></div>
+      <div class="right-button onecol" style="display: block;"></div>
+   </div>
+</div>
+		<!-- Fetched from cache --><div class="midbox">
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="info">Info</li>
+		<li class="tab-link show-comments" data-tab="review">Reviews</li>
+		<li class="tab-link show-share" data-tab="share" data-id="35706">Share</li>
+			</ul>
+	<div id="info" class="tab-content current">
+ 
+<div id="info-box">
+<h1>Uno Online</h1>
+ 
+ 
+<div id="description">
+ 
+<p>This free UNO online card game is a colorful, 3-player version of the classic UNO card game. Here you play against two computer opponents.</p>
+<p>To begin, click the Medium link under the picture at left. This opens the game in a pop-up window.</p>
+<p>UNO is a classic, with millions of sets sold over the years. Like most card games, UNO trains concentration, memory, and reaction time.</p>
+ 
+ 
+ 
+ 
+ 
+ 
+		<p>Just Have Fun!</p>
+		</div>
+ 
+ 
+<div id="how-to"><div id="howto"><h3>How to Play:</h3><p>The object of UNO is to get rid of all your cards before the other players get rid of theirs. You get rid of cards from your hand by discarding cards that match the top card in the Discard pile in the center of the table.</p>
+<p>The game is called &#8220;UNO&#8221; (which means &#8220;one&#8221; in Spanish) because when you get down to only one card in your hand you are supposed to shout the word &#8220;UNO&#8221;. If you forget to say UNO, you are penalized by having to draw two more cards from the pile. Of course, it&#8217;s rather silly to yell UNO at a computer, so in this UNO online card game you need to quickly press the red UNO button instead (see below).</p>
+<p>The game keeps track of your score during each round. A Winners page displays when each round is over. UNO is a really fun game. It&#8217;s even more enjoyable when you play against real people with real UNO cards. I own UNO and have played it with family and friends for years.</p>
+</div></div>
+ 
+ 
+<ul class="tags"><li><a href="https://kbhgames.com/tag/board">Board</a></li><li><a href="https://kbhgames.com/tag/card">Card</a></li><li><a href="https://kbhgames.com/tag/family">Family</a></li><li><a href="https://kbhgames.com/tag/kids">Kids</a></li><li><a href="https://kbhgames.com/tag/memory">Memory</a></li><li><a href="https://kbhgames.com/tag/puzzle">Puzzle</a></li><li><a href="https://kbhgames.com/tag/uno">Uno</a></li></ul>
+ 
+</div>
+	</div>
+	<div id="review" class="tab-content">
+	</div>
+	<div id="share" class="tab-content">
+	</div>
+	</div>
+ <div class="bottom">
+ 
+		 
+<div class="tag-carousel tag-carousel2 nomobile">
+		 <span class="sf alignleft">New Games</span>
+            <div class="more"><a href="https://kbhgames.com/new">(See More)</a></div>
+		 <div id="new-games" class="slider">
+			 <div class="left-button onecol" style="display: none;"></div> <div class="right-button onecol"></div>
+			 </div>  
+ </div>
+ 
+<div class="tag-carousel tag-carousel2 nomobile">
+		 <span class="sf alignleft">Popular Games</span>
+            <div class="more"><a href="https://kbhgames.com/best-games">(See More)</a></div>
+			 <div id="popular" class="slider">
+			<div class="left-button onecol" style="display: none;"></div> <div class="right-button onecol"></div>
+</div>  
+ </div>
+</div>
+ 
+ 
+ 
+	 
+	 <footer>
+        <div class="bar">
+            <div class="bar-wrap">
+                <ul class="links">
+                    <li><a href="https://kbhgames.com">KBH Games</a></li>
+					<li><a href="https://kbhgames.com/about">About</a></li>
+					<li><a href="https://kbhgames.com/terms-of-use">Terms and Conditions</a></li>
+                    <li><a href="https://kbhgames.com/privacy">Privacy</a></li>
+                </ul>
+ 
+                <div class="clear"></div>
+ 
+            </div>
+        </div>
+		</footer>
+		</div>
+<script src='//kbhgames.com/wp-content/themes/v1/js/jquery-3.4.1.min.js'></script>
+<script type="text/javascript" id="post-views-counter-frontend-js-before">
+/* <![CDATA[ */
+var pvcArgsFrontend = {"mode":"js","postID":35706,"requestURL":"https:\/\/kbhgames.com\/wp-admin\/admin-ajax.php","nonce":"e2ff5fc8a3","dataStorage":"cookies","multisite":false,"path":"\/","domain":""};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://kbhgames.com/wp-content/plugins/post-views-counter/js/frontend.min.js?ver=1.4.6" id="post-views-counter-frontend-js"></script>
+	<script type="text/javascript">
+	var relevanssi_rt_regex = /(&|\?)_(rt|rt_nonce)=(\w+)/g
+	var newUrl = window.location.search.replace(relevanssi_rt_regex, '')
+	history.replaceState(null, null, window.location.pathname + newUrl + window.location.hash)
+	</script>
+	
+ 
+<noscript id="deferred-styles">
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/v1/style.css?v=156">
+</noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+	
+<script defer src="//kbhgames.com/wp-content/themes/v1/js/bottom-all.js?v=33dss4"></script>
+<script defer src="//kbhgames.com/wp-content/themes/v1/js/bottom-single.js?v=15"></script> <div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+  <div class="overlay-content">
+    <form action="https://kbhgames.com/">
+      <input type="text" placeholder="Search.." name="s">
+      <button type="submit"><span class="icon-search"></span></button>
+    </form>
+  </div>
+</div>
+ 
+<div id="modal-login" class="ml-modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+</body>
+</html>
+ 
+ 
